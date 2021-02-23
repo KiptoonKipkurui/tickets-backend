@@ -11,10 +11,10 @@ dotnet build --configuration Release'''
       }
     }
 
-    stage('') {
+    stage('error') {
       steps {
         dir(path: '/var/jenkins_home/workspace/tickets-backend_master/TIcketingSystem.API/bin/Release/netcoreapp3.1/') {
-          sh 'zip . release.zip'
+          sh 'zip release.zip *'
         }
 
       }
